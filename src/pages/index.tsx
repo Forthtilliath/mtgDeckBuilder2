@@ -9,7 +9,6 @@ import { store } from '@/lib/redux/store'
 export default function Home({
       cards,
     }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log({ cards })
   return (
     <Provider store={store}>
       <MainLayout>
@@ -29,7 +28,6 @@ export async function getServerSideProps() {
   const res = await fetcher<CardAPIData>(
     'https://api.magicthegathering.io/v1/cards'
   )
-  console.log({ res })
   const cards = res.cards
     .filter((cardData) => cardData.imageUrl)
     .map((c) => ({ id: c.id, name: c.name, imageUrl: c.imageUrl }))
