@@ -1,9 +1,1 @@
-## MtG deck-builder... Or not
-
-Thius website is a PoC to learn these tools from scratch:
-
-- Next
-- Typescript
-- Prisma
-- Commitizen
-- ...
+Forked from https://github.com/Coding-Jarl/mtgDeckBuilder/
