@@ -1,0 +1,25 @@
+.card {
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem;
+
+  &:hover,
+  &:focus {
+    border: 2px solid purple;
+    margin: calc(1rem - 2px);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    position: relative;
+    pointer-events: none;
+    &::after {
+      position: absolute;
+      content: '';
+      inset: 0;
+      display: block;
+      background: hwb(0 0% 100% / 0.5);
+    }
+  }
+}
